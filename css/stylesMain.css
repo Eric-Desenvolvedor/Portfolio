@@ -75,6 +75,7 @@ header .navbar .navbar-list {
 }
 
 @media (max-width: 768px) {
+
   .menu-toggle {
     display: block; /* Mostra o botão hambúrguer */
   }
@@ -189,7 +190,7 @@ main .sobre {
   display: flex;
   flex-direction: column;
   padding: 2rem 1%;
-  margin: 5rem;
+  margin: 10%;
   border-radius: 50px;
   border-style: solid;
   border-color: #563874;

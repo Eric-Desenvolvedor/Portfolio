@@ -46,3 +46,16 @@
     content: "Transformando problemas em soluções";
   }
 }
+
+@media (max-width: 768px) {
+  .texto-animado .effect-text::after {
+  content: "";
+  position: relative;
+  height: 0;
+  border-left: none;
+  right: auto;
+  animation: none;
+  width: 0;
+  background-color: 0;
+  }
+}
