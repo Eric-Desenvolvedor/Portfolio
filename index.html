@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/stylesMain.css" />
+    <link rel="stylesheet" href="css/stylesCard.css">
+    <link rel="stylesheet" href="css/stylesAnimation.css">
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon" />
+    <title>Portfólio | Eric Lima</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1><span style="color: rgb(199, 129, 0);">Eric </span>Lima.</h1>
+        <button
+          class="menu-toggle"
+          id="mobile-menu"
+          aria-controls="nav-list"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <ul class="navbar-list" id="nav-list">
+          <li><a href="#">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="inicio">
+        <div>
+          <div class="texto-animado">
+            <h2 class="effect-text"></h2>
+          </div>
+
+          <p>Web Developer | Front-end Developer</p>
+
+          <a class="a-projects" href="#projetos">Projetos</a>
+        </div>
+
+        <img
+          src="assets/perfil.jpg"
+          alt="Imagem de perfil de Eric Lima"
+          class="profile-image"
+        />
+      </section>
+
+      <section id="sobre" class="sobre">
+        <h2>Sobre mim</h2>
+        <p>
+          Me chamo Eric Lima, sou um desenvolvedor web apaixonado por criar
+          soluções inovadoras e eficientes. Com experiência em diversas
+          tecnologias, estou sempre buscando aprender e aprimorar minhas
+          habilidades para entregar o melhor resultado possível.
+        </p>
+      </section>
+
+      <section id="projetos" class="projects">
+        <h2>________ Projetos ________</h2>
+        <div class="projects-container" id="projects-container"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Eric Lima. Todos os direitos reservados.</p>
+      <ul class="footer-contact">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/ericdesenvolvedor/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/Eric-Desenvolvedor" target="_blank"
+            >GitHub</a
+          >
+        </li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/cards.js"></script>
+  </body>
+</html>

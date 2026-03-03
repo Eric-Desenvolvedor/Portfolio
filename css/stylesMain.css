@@ -1,0 +1,238 @@
+:root {
+  --primary-color: #090013;
+  --secondary-color: #000000;
+  --text-color: #d4d3d3;
+  --details-color: rgb(209, 136, 0);
+}
+
+* {
+  color: var(--text-color); /*cor do texto*/
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--primary-color); /*cor de fundo*/
+}
+
+header {
+  border-bottom: 1px solid rgba(129, 129, 129, 0.3); /*borda inferior do header*/
+  margin-bottom: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+header .navbar h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* botão de menu (hambúrguer) - oculto por padrão em desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  /* transição para transformações e cor */
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+/* estado aberto (clase adicionada pelo JS) */
+.menu-toggle.open {
+  transform: rotate(90deg); /* exemplo de animação suave */
+}
+header .navbar .navbar-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-list li:hover {
+  scale: 1.1;
+  transition: ease-in-out 0.35s;
+}
+
+.navbar-list a:hover {
+  color: var(--details-color);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Mostra o botão hambúrguer */
+  }
+
+  header .navbar {
+    padding: 1rem 1.2rem;
+  }
+
+  /* Menu colapsado por padrão no mobile */
+  header .navbar .navbar-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 0;
+    z-index: 50;
+  }
+
+  header .navbar-list li {
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 0;
+  }
+
+  header .navbar-list a {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Quando o menu estiver ativo (aberto) */
+  header .navbar .navbar-list.active {
+    display: flex;
+  }
+
+  main .inicio {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 18%;
+  }
+
+  .profile-image {
+    margin-top: -8%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .inicio {
+    flex-direction: column;
+  }
+
+  .profile-image {
+    margin-top: -8%;
+  }
+}
+
+main .inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 10%;
+  border-bottom: 1px solid rgba(129, 129, 129, 0.226);
+}
+
+main section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+main section p {
+  font-size: 1rem;
+  text-align: center;
+  color: rgb(172, 172, 172);
+}
+
+main section .a-projects {
+  color: var(--secondary-color);
+  margin: 2rem 0px 0px 0px;
+  padding: 0.5rem 4rem;
+  background-color: rgb(199, 129, 0);
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.a-projects:hover {
+  background-color: var(--details-color);
+  transform: scale(1.05) translateY(-0.2rem);
+  transition: ease-in-out 0.4s;
+  box-shadow: 1px 1px 5px 1px #52582c;
+}
+
+main section .profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 1px 1px 10px 5px #715b8f;
+  margin-bottom: 5%;
+}
+
+main .sobre {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1%;
+  margin: 5rem;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #563874;
+  align-items: center;
+}
+
+main .sobre h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+main .sobre p {
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--text-color);
+  margin: 0 2rem;
+  text-align: justify;
+}
+
+main .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  border-top: 1px solid rgba(129, 129, 129, 0.226); /*borda superior do footer*/
+  margin-top: 1.5rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+
+footer .footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
