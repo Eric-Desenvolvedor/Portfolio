@@ -1,3 +1,5 @@
+const text = document.querySelector("#textAnimado");
+
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("mobile-menu");
   const nav = document.querySelector(".navbar-list");
@@ -20,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.classList.toggle("open", opened);
   });
 
-  // Fecha o menu ao clicar em um link (útil em mobile)
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("active");
@@ -30,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Garante que o menu seja fechado ao redimensionar para desktop
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
       nav.classList.remove("active");
@@ -41,3 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function textoSemAnimacao() {
+  if (window.innerWidth <= 768) {
+    text.textContent = "Transformando problemas em soluções";
+  } else {
+    text.textContent = "";
+  }
+}
+
+textoSemAnimacao();
+window.addEventListener("resize", textoSemAnimacao);

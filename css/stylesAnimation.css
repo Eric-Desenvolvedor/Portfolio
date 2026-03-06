@@ -58,4 +58,10 @@
   width: 0;
   background-color: 0;
   }
+  
+  .texto-animado .effect-text::before {
+  content: "";
+  color: rgb(199, 129, 0);
+  animation: none;
+}
 }
