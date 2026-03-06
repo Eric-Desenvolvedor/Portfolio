@@ -2,6 +2,7 @@
   padding-bottom: 10px;
   font-size: 2.3rem;
   text-align: center;
+  z-index: 1;
 }
 
 .texto-animado .effect-text {
